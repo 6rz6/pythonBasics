@@ -253,7 +253,68 @@ if bool(input('Enter to learn about Using Libraries')) == True:
     plt.ylabel('Y-axis')
     plt.show()
 ```
+### 3. Additional Topics
 
+#### API Access <a name="api-access"></a>
+
+**Explanation:**
+- APIs (Application Programming Interfaces) allow applications to communicate and share data.
+- Python provides the `requests` library for interacting with APIs.
+- Here are examples of accessing four different APIs: CoinGecko for crypto prices, OpenAI GPT-4 for chat, DuckDuckGo for search, and JokeAPI for jokes.
+- Examples of accessing various APIs using the `requests` library.
+- CoinGecko for crypto prices, OpenAI GPT-4 for chat, DuckDuckGo for search, and JokeAPI for jokes.
+- Note: For the OpenAI GPT-4 API, you need to set 'YOUR_OPENAI_API_KEY'
+```python
+
+# Example 1: CoinGecko API for crypto prices
+if bool(input('Enter to connect to coingecko')) == True:
+    import requests    
+    response_coingecko = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd')
+    data_coingecko = response_coingecko.json()
+    print('Crypto Prices:')
+    print(f'Bitcoin: ${data_coingecko["bitcoin"]["usd"]}')
+    print(f'Ethereum: ${data_coingecko["ethereum"]["usd"]}')
+```
+```python
+# Example 2: OpenAI GPT-4 API for chat
+if bool(input('Enter to connect to gpt4')) == True:
+    import requests   
+    response_openai = requests.post(
+        'https://api.openai.com/v1/chat/completions',
+        headers={'Authorization': 'Bearer YOUR_OPENAI_API_KEY'},
+        json={'messages': [{'role': 'system', 'content': 'You are a helpful assistant.'}]}
+    )
+    data_openai = response_openai.json()
+    print('\nOpenAI Chat Response:')
+    print(data_openai['choices'][0]['message']['content'])
+```
+```python
+# Example 3: DuckDuckGo API for search
+if bool(input('Enter to connect to DuckDuckGo')) == True:
+    import requests    
+    query = input('\nEnter a search query for DuckDuckGo: ')
+    response_duckduckgo = requests.get(f'https://api.duckduckgo.com/?q={query}&format=json')
+    data_duckduckgo = response_duckduckgo.json()
+    print('\nDuckDuckGo Search Results:')
+    for result in data_duckduckgo['Results']:
+        print(result['Text'])
+```
+```python
+# Example 4: JokeAPI for jokes
+if bool(input('Enter to connect to jokes')) == True:
+    import requests
+    response_jokeapi = requests.get('https://v2.jokeapi.dev/joke/Any')
+    data_jokeapi = response_jokeapi.json()
+    print('\nJokeAPI Joke:')
+    if data_jokeapi['type'] == 'twopart':
+        print(f'Q: {data_jokeapi["setup"]}')
+        print(f'A: {data_jokeapi["delivery"]}')
+    else:
+        print(data_jokeapi['joke'])
+```
+
+
+  
 ### Databases <a name="databases"></a>
 
 **Explanation:**
