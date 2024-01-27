@@ -71,10 +71,25 @@ if bool(input('Enter to skip Strings')) == True:
 
 ```python
 # Numeric calc div mod
-if bool(input('Enter to skip Numeric')) == True:
-    num = 3 + 3 - 2
-    print('3 + 3 - 2 = ' + str(num))
-    # ... (more numeric operations)
+if bool(input('Enter to skip Numeric'))==True:  
+  num = 3 + 3 - 2
+  print('3+3-2 = ' + str(num))
+  num3 = 10 / 3 * 2
+  print('10/3*2 = ' + str(num3))
+  num2 = 10 // 3
+  print('10 div 3 = ' + str(num2))
+  num4 = 10 % 3
+  print('10 mod 3 = ' + str(num4))
+  num5 = 10 ** 3
+  print('10^3 =  ' + str(num5))
+  num +=num # num = num+number
+  print('+=num =  ' + str(num))
+  num *=num # num = num*number
+  print('*=num =  ' + str(num))
+  num -=num # num = num-number
+  print('-=num =  ' + str(num))
+  num /=num+1 # num = num/number
+  print('/=num =  ' + str(num))
 ```
 
 **Explanation:**
@@ -85,10 +100,13 @@ if bool(input('Enter to skip Numeric')) == True:
 
 ```python
 # operations > < !=
-if bool(input('Enter to skip Operations')) == True:
-    num = 3 > 2
-    print('3 > 2 = ' + str(num))
-    # ... (more conditional operations)
+if bool(input('Enter to skip Operations'))==True: 
+  num = 3 > 2 # = True
+  print('3 > 2 =  ' + str(num))
+  num = 3 != 2 # = True
+  print('3 != 2 =  ' + str(num))
+  num = 3 == 2 # = False
+  print('3 == 2 =  ' + str(num))
 ```
 
 **Explanation:**
@@ -108,24 +126,34 @@ if bool(input('Enter to skip Operators')) == True:
 - Introduction to logical operators (`and`, `or`, `not`) and their use in compound conditions.
 
 ### Loops and Iteration
-
-```python
-# loops & Iterating over a list
-if bool(input('Enter to skip loops')) == True:
-    i = 1
-    fruits = ["apple", "banana", "cherry", "melon"]
-    while i < len(fruits):
-        print(i * "*")
-        print(fruits[i])
-        i += 1
-    # ... (more loop examples)
-```
-
 **Explanation:**
 - Introduction to loops (`while` and `for`) and iterating over a list.
+```python
+# loops & Iterating over a list
+if bool(input('Enter to skip loops'))==True:
+  i=1
+  
+  fruits = ["apple", "banana", "cherry","melon"]
+  
+  while i < len(fruits):
+    print(i*"*")
+    print(fruits[i])
+    i+=1
+  
+  print(fruits[-2])
+  fruits[-2]="pineapple"
+  
+  for fruit in fruits:
+    print(fruit)
+  
+  print(fruits[1:3]) 
+```
+
+
 
 ### Ranges
-
+**Explanation:**
+- Demonstrates the use of `range()` to generate a sequence of numbers.
 ```python
 # Ranges
 if bool(input('Enter to skip Ranges')) == True:
@@ -134,8 +162,7 @@ if bool(input('Enter to skip Ranges')) == True:
         print(num)
 ```
 
-**Explanation:**
-- Demonstrates the use of `range()` to generate a sequence of numbers.
+
 
 ## 2. Advanced Topics
 
