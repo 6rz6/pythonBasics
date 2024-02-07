@@ -89,9 +89,10 @@ import asyncio, ollama, tkinter as tk
     while bool(input_data):
         input_data = input(">>> ")
         asyncio.run(chat(input_data))
-        
-
-    #Ollama Client
+```        
+##  Ollama Client Conversations
+```python
+    
     from ollama import Client
     client = Client(host='http://localhost:11434')
     response = client.chat(model='mistral', messages=[
