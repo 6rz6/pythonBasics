@@ -6,6 +6,7 @@ Welcome to this comprehensive Python tutorial where we'll explore various Python
 
 - [Scraping URL](#scraping-url)
 - [Using Ollama for AI Conversations](#using-ollama-for-ai-conversations)
+- [Ollama Client Conversations](#Ollama-Client-Conversations)
 - [File Management in Python](#file-management-in-python)
 - [Play a Snake Game with Pygame](#play-a-snake-game-with-pygame)
 - [Real-Time Tickers from Binance](#real-time-tickers-from-binance)
